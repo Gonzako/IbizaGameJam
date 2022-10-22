@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BasePlayerAI : MonoBehaviour
+public class AISetup : MonoBehaviour
 {
     private Grid Enviroment;
     private Vector3Int CurrentPosition;
@@ -22,10 +22,16 @@ public class BasePlayerAI : MonoBehaviour
         CurrentPosition = Enviroment.WorldToCell(transform.position);
         visuals.localPosition = Vector3.zero;
         logic.position = Enviroment.CellToWorld(CurrentPosition);
-        logic.GetComponent<AILogic>().SetCell(CurrentPosition);
+        var AIlog = logic.GetComponent<AILogic>();
+        AIlog.SetCell(CurrentPosition);
         if (!LevelSingleton.instance.MapCollision.HasTile(CurrentPosition))
         {
             OnUnitSplash.Invoke(transform.position);
+            Destroy(this.gameObject, 0.1f);
+        }
+        else
+        {
+            LevelSingleton.instance.AddAIToLevel(AIlog);
         }
     }
 

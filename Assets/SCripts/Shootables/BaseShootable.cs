@@ -10,7 +10,7 @@ public class BaseShootable : MonoBehaviour, IShootable
     public int GetWeight => this.Weight;
     public FloatVariable StrengthMultiplier;
     public Transform HoldingTransform => this.transform;
-
+    public AISetup TargetToSpawn;
     [SerializeField]
     private int Weight = 1;
 
@@ -32,8 +32,14 @@ public class BaseShootable : MonoBehaviour, IShootable
         strength = Mathf.Clamp(strength, 0, 3);
         Debug.Log("Test shoot, you shouldnt be using this in production");
         var targetPoint = transform.position + transform.up * -strength * StrengthMultiplier.Value;
-        transform.DOMove(targetPoint, 1).SetEase(Ease.OutCirc);
+        var result = transform.DOMove(targetPoint, 1).SetEase(Ease.OutCirc).OnComplete(SpawnFunc);
 
         //
     }
+
+    private void SpawnFunc()
+    {
+        GameObject.Instantiate(TargetToSpawn, transform.position, Quaternion.identity);
+    }
+
 }

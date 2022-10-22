@@ -540,6 +540,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cell: {x: 0, y: 0, z: 0}
+  FromPlayer: 1
 --- !u!1 &2875947918694675743
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2875947918694675743}
   m_LocalRotation: {x: 0, y: 0.004363309, z: 0, w: 0.99999046}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -8,8 +8,10 @@ public class LevelSingleton : MonoBehaviour
     public static LevelSingleton instance;
     public Grid EnviromentGrid;
     public Tilemap MapCollision;
-
-
+    public Vector2Int PickupCell;
+    public Vector2Int GoldPoint;
+    private List<BaseAILogic> PlayerAis = new List<BaseAILogic>();
+    private List<BaseAILogic> EnemyAis = new List<BaseAILogic>();
 
     private Vector3Int[,] spots;
     private BoundsInt bounds;
@@ -43,7 +45,7 @@ public class LevelSingleton : MonoBehaviour
         }
     }
  
-    private void OnDisable()
+    private void OnDestroy()
     {
         instance = null;
     }
@@ -51,5 +53,13 @@ public class LevelSingleton : MonoBehaviour
     public List<Spot> GetPathTowardsPoint(Vector2Int Start, Vector2Int Target)
     {
         return Pathfinding.CreatePath(spots, Start, Target, 1000);
+    }
+
+    public void AddAIToLevel(BaseAILogic target)
+    {
+        if (target.IsForPlayer)
+            PlayerAis.Add(target);
+        else
+            EnemyAis.Add(target);
     }
 }

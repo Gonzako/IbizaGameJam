@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StrengthMultiplier: {fileID: 11400000, guid: b0d929196a00b27439f19192248b21e3, type: 2}
+  TargetToSpawn: {fileID: 838149488, guid: a08492c2febd43044826da8cfc07820d, type: 3}
   Weight: 1
   OnThisShoot:
     m_PersistentCalls:
