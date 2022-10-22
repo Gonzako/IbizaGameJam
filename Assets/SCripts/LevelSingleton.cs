@@ -8,6 +8,7 @@ public class LevelSingleton : MonoBehaviour
     public static LevelSingleton instance;
     public Grid EnviromentGrid;
     public Tilemap MapCollision;
+
     
     private void Awake()
     {
@@ -17,5 +18,10 @@ public class LevelSingleton : MonoBehaviour
     private void OnDisable()
     {
         instance = null;
+    }
+
+    public void AddAIToGrid(BasePlayerAI target)
+    {
+
     }
 }
