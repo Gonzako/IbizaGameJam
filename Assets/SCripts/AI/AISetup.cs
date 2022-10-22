@@ -22,7 +22,7 @@ public class AISetup : MonoBehaviour
         CurrentPosition = Enviroment.WorldToCell(transform.position);
         visuals.localPosition = Vector3.zero;
         logic.position = Enviroment.CellToWorld(CurrentPosition);
-        var AIlog = logic.GetComponent<AILogic>();
+        var AIlog = logic.GetComponent<BaseAILogic>();
         AIlog.SetCell(CurrentPosition);
         if (!LevelSingleton.instance.MapCollision.HasTile(CurrentPosition))
         {
