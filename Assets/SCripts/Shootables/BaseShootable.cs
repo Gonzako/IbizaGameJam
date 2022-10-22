@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
+using ScriptableObjectArchitecture;
 
 public class BaseShootable : MonoBehaviour, IShootable
 {
     public int GetWeight => this.Weight;
-
+    public FloatVariable StrengthMultiplier;
     public Transform HoldingTransform => this.transform;
 
     [SerializeField]
@@ -28,9 +29,10 @@ public class BaseShootable : MonoBehaviour, IShootable
 
     public void OnShoot(float strength)
     {
+        strength = Mathf.Clamp(strength, 0, 3);
         Debug.Log("Test shoot, you shouldnt be using this in production");
-
-        transform.DOMove(transform.position + transform.up * -strength, 1).SetEase(Ease.OutCirc);
+        var targetPoint = transform.position + transform.up * -strength * StrengthMultiplier.Value;
+        transform.DOMove(targetPoint, 1).SetEase(Ease.OutCirc);
 
         //
     }
