@@ -178,9 +178,9 @@ MonoBehaviour:
       - {x: 14, y: 0, z: 0}
       - {x: 14, y: 0, z: 0}
       - {x: 14, y: 14, z: 0}
-      - {x: 0.9659459, y: 14, z: 0}
-      - {x: 0, y: 14, z: 0}
-      - {x: -14, y: 14, z: 0}
+      - {x: 0.9659459, y: 12, z: 0}
+      - {x: 0, y: 12, z: 0}
+      - {x: -14, y: 12, z: 0}
       - {x: -14, y: 3, z: 0}
       isClosed: 1
       space: 1
@@ -197,7 +197,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
