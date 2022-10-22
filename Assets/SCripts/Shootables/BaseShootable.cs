@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class BaseShootable : MonoBehaviour, IShootable
 {
@@ -29,5 +30,8 @@ public class BaseShootable : MonoBehaviour, IShootable
     {
         Debug.Log("Test shoot, you shouldnt be using this in production");
 
+        transform.DOMove(transform.position + transform.up * -strength, 1).SetEase(Ease.OutCirc);
+
+        //
     }
 }

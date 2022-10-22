@@ -31,6 +31,7 @@ public class PlayerAiming : MonoBehaviour
         {
             Debug.Log("Player held long enough to be able to shoot");
             enableShoot = true;
+            
         }
     }
 
