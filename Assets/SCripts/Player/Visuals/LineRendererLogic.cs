@@ -38,11 +38,9 @@ public class LineRendererLogic : MonoBehaviour
 
     private void LateUpdate()
     {
-        var targetDirection = (Vector2)Input.mousePosition - startPoint;
-        //Width and size of the camera set as raw numbers (for now)
-        var screenAwareDirection = new Vector2(targetDirection.x*15f / Screen.currentResolution.width, targetDirection.y*8.435f / Screen.currentResolution.height);
+        var screenAwareDirection = CalcHelpers.GetPlayerShoot(startPoint);
         var currentMagnitude = screenAwareDirection.magnitude;
-        Debug.Log(currentMagnitude.ToString() + " " + screenAwareDirection.ToString());
+        //Debug.Log(currentMagnitude.ToString() + " " + screenAwareDirection.ToString());
         TargetLine.SetPosition(1, ((Invert ? -1 : 1)* screenAwareDirection.normalized*Mathf.Clamp(currentMagnitude,0, MaximumLenght) +(Vector2)transform.position));
         TargetLine.SetPosition(0, transform.position);
     }

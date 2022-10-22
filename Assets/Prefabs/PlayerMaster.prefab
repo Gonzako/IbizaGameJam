@@ -416,7 +416,19 @@ MonoBehaviour:
   _event: {fileID: 11400000, guid: 8cd24f158cad1794cb08284c39aaad7b, type: 2}
   _response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7434586443189720927}
+        m_TargetAssemblyTypeName: PlayerShooting, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _debugValue: {x: 0, y: 0}
 --- !u!114 &7434586442000277792
 MonoBehaviour:
@@ -627,13 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c53e39e96ca448baa58fc6a620457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentShoot:
-    rid: -2
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+  currentShoot: {fileID: 0}
 --- !u!114 &7434586443189720920
 MonoBehaviour:
   m_ObjectHideFlags: 0

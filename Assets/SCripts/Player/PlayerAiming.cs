@@ -45,7 +45,7 @@ public class PlayerAiming : MonoBehaviour
         {
             return;
         }
-        var endPoint = (Vector2)Input.mousePosition - startPoint;
-        OnHandleShoot.Raise(endPoint);
+        var targetPoint = CalcHelpers.GetPlayerShoot(startPoint);
+        OnHandleShoot.Raise(targetPoint);
     }
 }

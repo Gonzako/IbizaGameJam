@@ -4,19 +4,42 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [SerializeReference]
-    public IShootable currentShoot;
+
+
+    public BaseShootable currentShoot;
+    
     // Start is called before the first frame update
-    public void Shoot(Vector3 Direction)
+    public void Shoot(Vector2 DirectionWithMagnitude)
     {
+        currentShoot.HoldingTransform.up = DirectionWithMagnitude;
+        currentShoot.OnShoot(DirectionWithMagnitude.magnitude);
+        currentShoot = null;
+    }
+
+    public void SetShootable(BaseShootable target)
+    {
+        currentShoot = target;
 
     }
-    
+    private void LateUpdate()
+    {
+        if (currentShoot is null)
+        {
+            return;
+        }
+        //This line may be replaced by animations, etc
+        currentShoot.HoldingTransform.transform.position = this.transform.position;
+    }
+
+
+   
+
 }
 
 public interface IShootable
 {
+    public Transform HoldingTransform { get; }
     public int GetWeight { get; }
-    public void OnShoot();
+    public void OnShoot(float strenght);
 
 }
