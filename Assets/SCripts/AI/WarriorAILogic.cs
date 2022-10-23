@@ -62,7 +62,7 @@ public class WarriorAILogic : BaseAILogic
 
     private void AttackEvent_OnReachEnemy(Transform obj)
     {
-        Debug.Log("Attacked!");
+        //Debug.Log("Attacked!");
         obj.GetComponent<Health>().RecieveDamage(attackDamage);
     }
 
