@@ -9,7 +9,7 @@ public class BaseAILogic : MonoBehaviour
     public float movementTime = 0.4f;
     public UnityEvent<Vector3> OnStartMoving;
     public Vector3Int cell;
-    public int damage = 50;
+    //public int damage = 50;
     public bool IsForPlayer { get => FromPlayer; }
     [SerializeField]
     private bool FromPlayer = true;
@@ -51,7 +51,7 @@ public class BaseAILogic : MonoBehaviour
         yield return new WaitForSeconds(movementTime);
     }
 
-    protected IEnumerator PathFindRoutine (Vector2Int Target)
+    protected virtual IEnumerator PathFindRoutine (Vector2Int Target)
     {
         var Path = LevelSingleton.instance.GetPathTowardsPoint((Vector2Int)cell, Target);
         if(Path is null)

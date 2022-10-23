@@ -2,18 +2,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-public class WarriorAILogic : BaseAILogic
+public class ArcherAILogic : BaseAILogic
 {
-    //First transform is attacker, second transform is attacked
     public event Action<Transform, Transform> OnUnitAttack = null;
-    public float attackDowntime = 0.5f;
-    public int attackDamage = 10;
-    private WarriorAttackAnimation attackEvent;
+    [Range(0, 5)]
+    public int attackRange = 3;
+    public float attackDowntime = 0.6f;
+    public ArcherProjectileLogic ProjectileToSpawn;
+    public Transform shootPoint;
+    private ArcherThrowAnimEvent attackEvent;
+    private BaseAILogic tempEnemy;
+
+    private void OnEnable()
+    {
+        attackEvent = transform.parent.GetComponentInChildren<ArcherThrowAnimEvent>();
+        attackEvent.OnRecieveShootCommand += AttackEvent_OnRecieveShootCommand;
+    }
+
+    private void OnDisable()
+    {
+        attackEvent.OnRecieveShootCommand -= AttackEvent_OnRecieveShootCommand;
+    }
+
     protected override IEnumerator WhatDoNext()
     {
+        tempEnemy = null;
         int enemyCount;
         if (this.IsForPlayer)
         {
@@ -24,12 +39,14 @@ public class WarriorAILogic : BaseAILogic
             enemyCount = LevelSingleton.instance.PlayerAis.Count;
         }
 
-        if (enemyCount>0)
+        if (enemyCount > 0)
         {
             var targetEnemy = FindNearestEnemy();
-            if (Vector3Int.Distance(targetEnemy.cell, cell) < 1.5f)
+            if (Vector3Int.Distance(targetEnemy.cell, cell) < (attackRange+0.5f))
             {
+                tempEnemy = targetEnemy;
                 OnUnitAttack?.Invoke(transform, targetEnemy.gameObject.transform);
+                
                 //Debug.Log(transform.parent + " attacked " + targetEnemy.gameObject.transform.parent);
                 yield return new WaitForSeconds(attackDowntime);
                 StartCoroutine(WhatDoNext());
@@ -38,7 +55,7 @@ public class WarriorAILogic : BaseAILogic
             else
             {
                 var path = LevelSingleton.instance.GetPathTowardsPoint((Vector2Int)targetEnemy.cell, (Vector2Int)cell);
-                yield return StartCoroutine(MoveRoutine(new Vector3Int(path[1].X,path[1].Y)));
+                yield return StartCoroutine(MoveRoutine(new Vector3Int(path[1].X, path[1].Y)));
                 StartCoroutine(WhatDoNext());
                 yield break;
             }
@@ -53,21 +70,17 @@ public class WarriorAILogic : BaseAILogic
         StartCoroutine(WhatDoNext());
     }
 
-
-    private void OnEnable()
+    private void AttackEvent_OnRecieveShootCommand()
     {
-        attackEvent = transform.parent.GetComponentInChildren<WarriorAttackAnimation>();
-        attackEvent.OnReachEnemy += AttackEvent_OnReachEnemy;
+        if(tempEnemy is null)
+        {
+            return;
+        }
+
+        var proj = Instantiate(ProjectileToSpawn, shootPoint.position, Quaternion.identity);
+        proj.SetTarget(tempEnemy);
+
     }
 
-    private void AttackEvent_OnReachEnemy(Transform obj)
-    {
-        //Debug.Log("Attacked!");
-        obj.GetComponent<Health>().RecieveDamage(attackDamage);
-    }
 
-    private void OnDisable()
-    {
-        attackEvent.OnReachEnemy -= AttackEvent_OnReachEnemy;
-    }
 }
