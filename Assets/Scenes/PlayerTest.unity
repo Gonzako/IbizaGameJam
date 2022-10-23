@@ -577,8 +577,6 @@ MonoBehaviour:
   PickupCell: {x: -2, y: 4}
   GoldPoint: {x: 0, y: 0}
   SpawnableAis:
-  - {fileID: 3211183176869016530, guid: 453f47ec6342b974d8162306a8bd6332, type: 3}
-  - {fileID: 3211183176869016530, guid: 453f47ec6342b974d8162306a8bd6332, type: 3}
   - {fileID: 4931653997399591806, guid: d77cc9833a6bc5341ab03eeafaaaa10f, type: 3}
   - {fileID: 6665172930377649730, guid: e579e6b8035da9240a83baa27d008629, type: 3}
 --- !u!4 &875819194
@@ -1694,6 +1692,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1123280318, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 468217172673223818, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1789,6 +1791,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4025730778003348878, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
   m_PrefabInstance: {fileID: 9214198407174187811}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &9214198407174187821 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 468217172673223818, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
+  m_PrefabInstance: {fileID: 9214198407174187811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &9214198407174187822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1821,8 +1828,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!224 &9214198407174187821 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 468217172673223818, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
-  m_PrefabInstance: {fileID: 9214198407174187811}
-  m_PrefabAsset: {fileID: 0}
