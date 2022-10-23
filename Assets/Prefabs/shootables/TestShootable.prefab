@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StrengthMultiplier: {fileID: 11400000, guid: b0d929196a00b27439f19192248b21e3, type: 2}
-  TargetToSpawn: {fileID: 838149488, guid: a08492c2febd43044826da8cfc07820d, type: 3}
+  TargetToSpawn: {fileID: 4603853907058139394, guid: c828e756b8201874982c1da1f7aff982, type: 3}
   Weight: 1
   OnThisShoot:
     m_PersistentCalls:
@@ -124,7 +124,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4153240674832713612, guid: 8a1f96c93a153e34a98b5f6dd6bbfebd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f2f52d3ec9fc6044b31ea98f2b6f127, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

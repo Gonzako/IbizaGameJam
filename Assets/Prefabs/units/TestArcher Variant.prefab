@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652605, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Name
-      value: TestArcher
+      value: TestArcher Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7533241649843615173, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Enabled
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1656182767868651430, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
   m_PrefabInstance: {fileID: 5565767920874061488}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8610915615405671827}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3878420c560a294d8247764b7d37b5d, type: 3}
@@ -168,6 +168,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8610915615405671827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232691294002543395, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+  m_PrefabInstance: {fileID: 5565767920874061488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6665687774939244301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610915615405671827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9acb34b464272c41853a21a730ca95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8610915615899422375 stripped
@@ -219,5 +236,5 @@ MonoBehaviour:
   FromPlayer: 1
   attackRange: 3
   attackDowntime: 0.6
-  ProjectileToSpawn: {fileID: 0}
+  ProjectileToSpawn: {fileID: 3710320916977886999, guid: 4954676256d4f004196b06b0126d276d, type: 3}
   shootPoint: {fileID: 1809952531}

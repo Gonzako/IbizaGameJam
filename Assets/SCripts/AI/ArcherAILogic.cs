@@ -55,6 +55,8 @@ public class ArcherAILogic : BaseAILogic
             else
             {
                 var path = LevelSingleton.instance.GetPathTowardsPoint((Vector2Int)targetEnemy.cell, (Vector2Int)cell);
+                if(path is null)
+                    yield break;
                 yield return StartCoroutine(MoveRoutine(new Vector3Int(path[1].X, path[1].Y)));
                 StartCoroutine(WhatDoNext());
                 yield break;

@@ -4877,6 +4877,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 935051784663852814, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 935051784663852814, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 935051784663852814, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 2448e5291ec50254d87078776fcbf78f, type: 2}
+    - target: {fileID: 935051784663852814, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 935051784663852814, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 935051784663852814, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+      objectReference: {fileID: 0}
+    - target: {fileID: 935051784663852814, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4923,7 +4951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652605, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Name
-      value: TestThief
+      value: TestThief Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8913975968244536604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Sprite
@@ -4979,7 +5007,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cell: {x: 0, y: 0, z: 0}
-  damage: 0
   FromPlayer: 1
   OnPickupGold:
     m_PersistentCalls:

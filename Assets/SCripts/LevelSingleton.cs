@@ -12,6 +12,7 @@ public class LevelSingleton : MonoBehaviour
     public Vector2Int GoldPoint;
 
     public List<BaseAILogic> PlayerAis { get => playerAis; }
+    public List<BaseShootable> SpawnableAis;
     public List<BaseAILogic> EnemyAis { get => enemyAis; }
     private List<BaseAILogic> playerAis = new List<BaseAILogic>();
     private List<BaseAILogic> enemyAis = new List<BaseAILogic>();
