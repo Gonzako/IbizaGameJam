@@ -9,6 +9,7 @@ public class BaseAILogic : MonoBehaviour
     public float movementTime = 0.4f;
     public UnityEvent<Vector3> OnStartMoving;
     public Vector3Int cell;
+    public int damage = 50;
     public bool IsForPlayer { get => FromPlayer; }
     [SerializeField]
     private bool FromPlayer = true;
@@ -22,6 +23,7 @@ public class BaseAILogic : MonoBehaviour
         cell = collision.WorldToCell(transform.position);
         StartCoroutine(WhatDoNext());
     }
+
 
     public void SetCell(Vector3Int target)
     {
@@ -41,7 +43,7 @@ public class BaseAILogic : MonoBehaviour
         StartCoroutine(WhatDoNext());
     }
 
-    IEnumerator MoveRoutine(Vector3Int adjacentCell)
+    protected IEnumerator MoveRoutine(Vector3Int adjacentCell)
     {
         OnStartMoving.Invoke(collision.CellToWorld(adjacentCell));
         cell = adjacentCell;
@@ -49,7 +51,7 @@ public class BaseAILogic : MonoBehaviour
         yield return new WaitForSeconds(movementTime);
     }
 
-    IEnumerator PathFindRoutine (Vector2Int Target)
+    protected IEnumerator PathFindRoutine (Vector2Int Target)
     {
         var Path = LevelSingleton.instance.GetPathTowardsPoint((Vector2Int)cell, Target);
         if(Path is null)
@@ -62,33 +64,40 @@ public class BaseAILogic : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             var targetSpot = Path[i];
             //Debug.Log(targetSpot);
-            cell = new Vector3Int(targetSpot.X, targetSpot.Y);
-            OnStartMoving.Invoke(collision.CellToWorld(cell)+Vector3.one*0.5f);
-            transform.position = collision.CellToWorld(cell);
-            yield return new WaitForSeconds(movementTime);
+            //OnStartMoving.Invoke(collision.CellToWorld(cell)+Vector3.one*0.5f);
+            //transform.position = collision.CellToWorld(cell);
+            yield return StartCoroutine(MoveRoutine(new Vector3Int(targetSpot.X, targetSpot.Y)));
         }
     }
     
-    private Vector3Int AdjacentEmptyCell()
+    protected BaseAILogic FindNearestEnemy()
     {
-        Vector3Int targetCell;
-        do
+        if (FromPlayer)
         {
-            targetCell = cell;
-            targetCell.x += Random.Range(-1, 2);
-            targetCell.y += Random.Range(-1, 2);
 
-            //To see if cell is ocuppied here
-        } while (!checkIfCellThere(targetCell));
-        return targetCell;
+            return FindNearest(LevelSingleton.instance.EnemyAis);
+        }
+        else
+        {
+            return FindNearest(LevelSingleton.instance.PlayerAis);
+        }
+
+
     }
 
-    private bool checkIfCellThere(Vector3Int cell)
+    private BaseAILogic FindNearest(List<BaseAILogic> target)
     {
-        return collision.HasTile(cell);
-
+        float distance = float.MaxValue;
+        int desiredIndex = 0;
+        for (int i = 0; i < target.Count; i++)
+        {
+            float currDist = Vector3Int.Distance(target[i].cell, cell);
+            if (currDist < distance)
+            {
+                desiredIndex = i;
+                distance = currDist;
+            }
+        }
+        return target[desiredIndex];
     }
-
-
-
 }

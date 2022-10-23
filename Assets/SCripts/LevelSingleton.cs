@@ -10,8 +10,11 @@ public class LevelSingleton : MonoBehaviour
     public Tilemap MapCollision;
     public Vector2Int PickupCell;
     public Vector2Int GoldPoint;
-    private List<BaseAILogic> PlayerAis = new List<BaseAILogic>();
-    private List<BaseAILogic> EnemyAis = new List<BaseAILogic>();
+
+    public List<BaseAILogic> PlayerAis { get => playerAis; }
+    public List<BaseAILogic> EnemyAis { get => enemyAis; }
+    private List<BaseAILogic> playerAis = new List<BaseAILogic>();
+    private List<BaseAILogic> enemyAis = new List<BaseAILogic>();
 
     private Vector3Int[,] spots;
     private BoundsInt bounds;
@@ -58,8 +61,16 @@ public class LevelSingleton : MonoBehaviour
     public void AddAIToLevel(BaseAILogic target)
     {
         if (target.IsForPlayer)
-            PlayerAis.Add(target);
+        {
+            playerAis.Add(target);
+            target.GetComponentInChildren<Health>().OnDeath.AddListener(() => playerAis.Remove(target));
+        }
         else
-            EnemyAis.Add(target);
+        {
+            enemyAis.Add(target);
+            target.GetComponentInChildren<Health>().OnDeath.AddListener(() => enemyAis.Remove(target));
+        }
+
+        
     }
 }
