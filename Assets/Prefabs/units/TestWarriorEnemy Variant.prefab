@@ -63,6 +63,18 @@ PrefabInstance:
       propertyPath: FromPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7533241649843615173, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: attackDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533241649843615173, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: movementTime
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533241649843615173, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: attackDowntime
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8913975968244536604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Size.x
       value: 0.64
