@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 494519532}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3361228769927271482}
+        m_TargetAssemblyTypeName: ResetLevel, Assembly-CSharp
+        m_MethodName: ResetScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &580185274
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +359,7 @@ GameObject:
   - component: {fileID: 6253421335646049101}
   - component: {fileID: 8833553532672736188}
   - component: {fileID: 9214198407174187814}
+  - component: {fileID: 3361228769927271482}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -469,6 +482,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &3361228769927271482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025730778003348878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cec0ed1829ff894ab6f97f5ef4a2680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5867286825397139795
 GameObject:
   m_ObjectHideFlags: 0
