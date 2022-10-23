@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652605, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Name
-      value: TestWarriorEnemy
+      value: TestWarriorEnemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6719663321885433373, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: managedReferences[6462561528976244738]
@@ -64,9 +64,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8913975968244536604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913975968244536604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913975968244536604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 76cda8ad96f786343a707d8962403d69, type: 3}
+      objectReference: {fileID: 21300000, guid: 7078aee28ce286a4384b1157d0f8b9bf, type: 3}
     - target: {fileID: 8913975968244536604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Color.b
       value: 1

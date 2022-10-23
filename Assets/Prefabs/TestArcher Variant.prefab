@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1809952530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1809952531}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809952531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809952530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.207, y: 0.455, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1273947973516911363}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5565767920874061488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13,11 +44,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.046
+      value: 5.07
       objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.967
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55,6 +86,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestArcher
       objectReference: {fileID: 0}
+    - target: {fileID: 7533241649843615173, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8913975968244536604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_Size.x
       value: 1.71875
@@ -67,8 +102,15 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -521573608, guid: f2f90838986d3ae47b6b63cea86ce4bd, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7296534225018798082, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+    - {fileID: 7533241649843615173, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+--- !u!4 &1273947973516911363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6669950353036516787, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+  m_PrefabInstance: {fileID: 5565767920874061488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5794291330713367844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2113561702053038996, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
@@ -106,3 +148,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6754b5e87bbfcf444a68d2432166ab14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6613084276593875222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1656182767868651430, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+  m_PrefabInstance: {fileID: 5565767920874061488}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3878420c560a294d8247764b7d37b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8610915614674870527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4232691294330756687, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+  m_PrefabInstance: {fileID: 5565767920874061488}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8610915615899422375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232691293441683479, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+  m_PrefabInstance: {fileID: 5565767920874061488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &272366039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610915615899422375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3411d8508dbc0bb4dadf56454f016277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementTime: 0.8
+  OnStartMoving:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6613084276593875222}
+        m_TargetAssemblyTypeName: AIVisualMove, Assembly-CSharp
+        m_MethodName: MoveToPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8610915614674870527}
+        m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
+        m_MethodName: PlayFeedbacks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  cell: {x: 0, y: 0, z: 0}
+  FromPlayer: 1
+  attackRange: 3
+  attackDowntime: 0.6
+  ProjectileToSpawn: {fileID: 0}
+  shootPoint: {fileID: 1809952531}
