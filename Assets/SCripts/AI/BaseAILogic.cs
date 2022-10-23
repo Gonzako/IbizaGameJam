@@ -51,7 +51,7 @@ public class BaseAILogic : MonoBehaviour
         yield return new WaitForSeconds(movementTime);
     }
 
-    protected IEnumerator PathFindRoutine (Vector2Int Target)
+    protected virtual IEnumerator PathFindRoutine (Vector2Int Target)
     {
         var Path = LevelSingleton.instance.GetPathTowardsPoint((Vector2Int)cell, Target);
         if(Path is null)
