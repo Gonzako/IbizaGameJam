@@ -7,6 +7,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 02515caf4b70783499c2fbed9c653e59, type: 2}
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7037482697882143991}
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838391975397895539, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5597293351285652604, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -101,3 +133,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+--- !u!1 &7037482697882143991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232691293441683479, guid: 1250160c3df0d6b4c88a227548d1f44d, type: 3}
+  m_PrefabInstance: {fileID: 6563894702628928736}
+  m_PrefabAsset: {fileID: 0}

@@ -605,11 +605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c53e39e96ca448baa58fc6a620457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1123280317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1123280317, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
-  m_PrefabInstance: {fileID: 9214198407174187811}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157085575
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,10 +654,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.40225562
-    y: -0.22807017
-    width: 0.96240604
-    height: 0.96240604
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1354,10 +1349,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7252449054354771556, guid: a07abb4a9ed197d46a6335f2bb0a7b95, type: 3}
-      propertyPath: _previouslyRegisteredEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 02515caf4b70783499c2fbed9c653e59, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a07abb4a9ed197d46a6335f2bb0a7b95, type: 3}
 --- !u!1001 &6563894702223765564
@@ -1568,11 +1559,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1123280317, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1123280318, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 468217172673223818, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
       propertyPath: m_Pivot.x
@@ -1660,44 +1647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4025730778003348878, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
       propertyPath: m_Name
-      value: WinScreen
+      value: Canvas - GameUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
---- !u!1 &9214198407174187812 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4025730778003348878, guid: 169bbe4b092a47d409b9baae839cd2f0, type: 3}
-  m_PrefabInstance: {fileID: 9214198407174187811}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9214198407174187822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9214198407174187812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 2448e5291ec50254d87078776fcbf78f, type: 2}
-  _event: {fileID: 11400000, guid: 2448e5291ec50254d87078776fcbf78f, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123280317}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
